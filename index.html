@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Психологія • Реклама</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --brand:#111; --accent:#ffd54f; --accent-dark:#f0c53c;
+      --primary:#4c96af; --primary-dark:#38878e; --danger:#F44336;
+      --bg:#ffffff; --muted:#666; --card:#fafafa; --line:#eee;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:Arial,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:#111;}
+    header{padding:20px 16px; border-bottom:1px solid var(--line); background:#fff; position:sticky; top:0; z-index:5}
+    h1{margin:0 0 6px; font-size:22px; line-height:1.25}
+    .sub{color:var(--muted); font-size:14px}
+    .bar{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .bar button{
+      padding:10px 12px; border:none; border-radius:8px; background:var(--primary); color:#fff; cursor:pointer; font-weight:600
+    }
+    .bar button:hover{background:var(--primary-dark)}
+    .wrap{max-width:980px; margin:0 auto; padding:18px 16px 60px}
+    section{display:none; background:var(--card); padding:16px; border:1px solid var(--line); border-radius:12px; margin:14px 0}
+    section.active{display:block}
+    h2{margin-top:0; font-size:20px}
+    .grid{display:grid; gap:12px}
+    @media(min-width:860px){ .grid.cols-2{grid-template-columns:1fr 1fr} }
+    ul{margin:8px 0 0 18px}
+    .note{background:#FFF3CD; border:1px solid #FFE082; padding:12px; border-radius:10px}
+    .price{background:#fff; border:1px dashed var(--accent); padding:12px; border-radius:10px}
+    .pill{display:inline-block; background:#111; color:#fff; padding:4px 10px; border-radius:999px; font-size:12px; letter-spacing:.3px}
+    .btn{display:inline-block; background:var(--danger); color:#fff; padding:12px 16px; border-radius:10px; text-decoration:none; border:none; cursor:pointer; font-weight:700}
+    .btn:hover{filter:brightness(.95)}
+    .q{margin:10px 0 6px; font-weight:700}
+    textarea, input[type="text"]{
+      width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:8px; font:inherit; background:#fff
+    }
+    .inline{display:flex; gap:8px; flex-wrap:wrap}
+    .chip{padding:8px 10px; border:1px solid #ddd; border-radius:999px; cursor:pointer; background:#fff}
+    .chip.active{border-color:#111; box-shadow:0 0 0 2px #1111}
+    .muted{color:var(--muted); font-size:13px}
+    .hr{height:1px; background:var(--line); margin:12px 0}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Психологія • Реклама</h1>
+  <div class="sub">Онлайн • Практика з експертом • Верифікація та дипломи</div>
+  <div class="bar">
+    <button onclick="show('hello')">👋 Привітання</button>
+    <button onclick="show('presentation')">🌍 Про нашу школу</button>
+    <button onclick="show('needs')">🔎 Виявлення потреб</button>
+    <button onclick="show('compliment')">Комплімент</button>
+    <button onclick="show('pres1')">Програма «Преміум»</button>
+    <button onclick="show('pres2')"> Програма «Глобал ПРО МАХ»</button>
+    <button onclick="show('objection')"> ❗️«Це дорого»</button>
+    <button onclick="show('objection2')"> ❗️«Не на часі»</button>
+
+  </div>
+</header>
+
+<main class="wrap">
+<section id="hello" class="section active">
+  <h2>👋 Привітання</h2>
+  <p> Добрий день, <em>[Ім’я клієнта]</em>!</p>
+  <p>Це <em>[Ваше ім’я]</em>, школа .....(напрямок) <strong>Expert</strong>. Ви залишали заявку на вивчення ......(напрямок) з нами?</p>
+  <p>Чудово! Тоді пропоную такий план розмови:</p>
+  <ul>
+    <li>Я коротко розповім про нашу школу</li>
+    <li>Задам кілька запитань, щоб підібрати найкращу програму саме для вас</li>
+    <li>Потім розповім про навчальні програми, їх переваги та вартість</li>
+    <li>Зараз у нас діють гарні <strong>пропозиції та обмежені можливості</strong> 💥</li>
+    <li>Після цього обговоримо варіанти оплати. Домовились?</li>
+  </ul>
+  <p> Відмінно! Тоді почнемо 🤝</p>
+  <button onclick="show('presentation')">Далі</button>
+</section>
+<section id="presentation" class="section">
+  <h2>🌍 Про нашу школу</h2>
+  <p>
+    Ми — <strong>Школа Expert</strong>, яка працює вже понад 11 років у Європі разом із провідними університетами та навчає людей практичним, корисним знанням.
+  </p>
+  <p>
+    Понад <strong>70 000 студентів</strong> вже переконалися, що наші методики реально працюють у житті та допомагають професійно зростати.
+  </p>
+  <p>
+    Ми — <strong>єдині в Україні</strong>, хто одразу надає <em>три міжнародні сертифікати</em>, що визнаються у <strong>93 країнах</strong> 🌎
+  </p>
+</br>
+  <div class="note">
+    🔹 Ми про <strong>практику, результат і впевненість у роботі з людьми</strong>, навіть якщо ви починаєте з нуля або вже фахівець.
+  <button onclick="show('needs')">Далі</button>
+</div>
+</section>
+<section id="needs" class="section">
+  <h2>🔎 Виявлення потреб</h2>
+  <p>✔️ Поставте клієнту 3 ключові запитання та уважно фіксуйте відповіді:</p>
+
+  <p><strong>1.</strong> Розкажіть, будь ласка, про свій досвід у сфері … (напрям)?</p>
+  <p><strong>2.</strong> Розкажіть, будь ласка, як ви плануєте використовувати нові знання?</p>
+  <p><strong>3.</strong> Що для вас особливо важливо в навчанні?</p>
+
+  <div class="note">
+    🔸 Важливо фіксувати: цілі, болі, очікування, мотивацію — щоб зробити точну презентацію та коректно внести в CRM.
+  </div>
+
+  <p><em>(Менеджер записує відповіді клієнта у CRM без змін змісту)</em></p>
+  <button onclick="show('compliment')">Далі</button>
+</section>
+<section id="compliment" class="section">
+  <h2>💬 Комплімент</h2>
+
+  <div class="tip">
+    🎯 <em>Комплімент робимо, спираючись на інформацію та досягнення, які надав клієнт</em>
+  </div>
+
+  <p>
+    <strong>Менеджер:</strong> Ім’я, я дійсно <strong>пишаюсь людьми</strong>, які постійно прагнуть вдосконалювати свої знання та навички.  
+    Тим паче, що ви вже є <em>професіоналом у своїй справі</em> 👏
+  </p>
+
+  <p>
+    Супер! Дякую вам за відвертість — дуже приємно спілкуватись із людиною, яка не стоїть на місці, прагне розвиватися і допомагати людям 💛
+  </p>
+
+  <p>
+    ✨ Спілкування з такими людьми надихає та ще раз доводить, що розвиток — це прямий шлях до змін у житті та нових результатів.
+  </p>
+
+  <p>
+    Виходячи з вашого запиту та цілей, я рекомендую вам розглянути <strong>два варіанти програм</strong>, які максимально цьому відповідають:
+  </p>
+
+  <div class="next">
+    👉 <em>Далі менеджер презентує кожну програму окремо з урахуванням відповідей клієнта</em>
+    <button onclick="show('pres1')">Далі</button>
+  </div>
+</section>
+<section id="pres1" class="section">
+  <h2>1. Програма «Преміум»</h2>
+  <p>
+    Це чудове рішення для тих, хто хоче отримати сильну базу в психології та одразу застосовувати знання на практиці.
+  </p>
+  <p><strong>Що входить:</strong></p>
+  <ul>
+    <li>🧠 Навички аналізу та розуміння поведінки людей</li>
+    <li>💬 Вміння керувати своїми емоціями та емоціями інших</li>
+    <li>⚡ Методи швидкої діагностики психологічних станів</li>
+  </ul>
+  <p>
+    <strong>Перевага програми:</strong> включено практичне відпрацювання з фідбеком від експерта — ви одразу бачите результати ще під час навчання, а не лише читаєте теорію.
+  </p>
+  <div class="note">🔹 Старт для новачків і впевнена практика для діючих фахівців</div>
+  <button onclick="show('pres1')">Програма «Преміум»</button>
+</section>
+
+<section id="pres2" class="section">
+  <h2>2. Програма «Глобал ПРО МАХ»</h2>
+  <p>
+    Це наш найпопулярніший формат — його обирають 80%+ студентів, бо він дає глибину, мощну практику та підготовку до реальної роботи з людьми.
+  </p>
+  <p><strong>Що входить:</strong></p>
+  <ul>
+    <li>📌 Знання психології з адаптацією під різні вікові групи</li>
+    <li>🔎 Практика, розбори кейсів, Zoom-сесії</li>
+    <li>🧩 Робота із запитами клієнтів та побудова якісних консультацій</li>
+    <li>🚀 Підготовка до запуску приватної практики та особистого бренду</li>
+    <li>🤝 Інтеграція психології у будь-яку професію</li>
+  </ul>
+  <p>
+    <strong>Ексклюзив:</strong> групова та індивідуальна супервізія, упакування бренду спеціаліста, живі Zoom-розбори з :contentReference[oaicite:0]{index=0}.
+  </p>
+  <p>
+    Ви проходите групову супервізію — обов’язковий формат росту для новачків і досвідчених психологів, який дозволяє бачити сліпі зони, коригувати помилки та швидко ставати сильнішим у консультуванні.
+  </p>
+  <p><strong>Питання до клієнта:</strong><br>
+    👉 Що вам більше відгукується: базовий формат чи варіант, де є супервізія та ведення до результату?
+  </p>
+  <button onclick="show('pres2')">Далі</button>
+</section>
+
+<section id="objection" class="section">
+  <h2>❗️Робота з запереченням: «Це дорого»</h2>
+
+  <p><strong>Менеджер:</strong> Розумію вас. Багато людей спочатку так думають, і це нормально.</p>
+  <p>Але давайте подивимось на питання з іншого боку 👇</p>
+
+  <div class="fact-box">
+    💼 Середня вартість консультації психолога в Україні — <strong>від 1000 грн</strong>,  
+    а фахівець може проводити <strong>3–4 сесії на день</strong>.
+  </div>
+
+  <p>📊 Якщо взяти 20 робочих днів на місяць:</p>
+  <ul>
+    <li>Мінімальний дохід психолога онлайн може становити: <strong>60 000 – 80 000 грн / місяць</strong></li>
+  </ul>
+
+  <p><strong>Менеджер:</strong> Як ви думаєте: багато людей можуть заробляти таку суму, працюючи онлайн?</p>
+  <p><strong>Клієнт:</strong> (відповідь клієнта)</p>
+
+  <p>
+    Тобто навчання — <strong>це не витрати</strong>.  
+    Це **інвестиція в навички**, які дуже швидко почнуть приносити результат і можуть окупитись за 2–3 місяці 📈
+  </p>
+
+  <p>
+    🎓 Більшість студентів Expert починають отримувати  
+    перший дохід **ще під час навчання — з 2–3 місяця**, коли вже застосовують методи у роботі з людьми.
+  </p>
+
+  <div class="highlight">
+    ⚡ І найголовніше:  
+    > Нові знання можуть монетизуватися вже з <strong>8–12 тижня</strong> практики,  
+    > а у повну силу працюють після супервізії та перших кейсів із .
+  </div>
+
+  <p><em>Тому розвиток своєї експертності — це шлях до стабільного доходу, свободи та допомоги людям 🤝💛</em></p>
+</section>
+
+<section id="objection2" class="section">
+  <h2>❗️Робота з запереченням: «Не на часі»</h2>
+
+  <p><strong>Менеджер:</strong> Розумію вас. Багато людей говорять так само — ми всі іноді любимо відкладати 😉</p>
+
+  <p>Але коли ми чекаємо «ідеального моменту» — щасливе завтра може так і не настати.</p>
+
+  <p><strong>Тетяно,</strong> ви вже давно про це думаєте, і ваші мрії — не стануть меншими.</p>
+
+  <div class="vision-box">
+    🌱 Ви — головний проєкт свого життя.  
+    І вкладати в себе — це не про «час», це про **цінність вашого майбутнього**.
+  </div>
+
+  <p>
+    Разом із Expert 
+    ви зможете займатися улюбленою справою, допомагати людям і бачити свій ріст 💛
+  </p>
+
+  <p><strong>Менеджер:</strong> Я дуже хочу вас підтримати:</p>
+  <ul>
+    <li>✨ Дам найкращі умови по вартості</li>
+    <li>🎁 Подарунок — на ваш вибір</li>
+  </ul>
+
+  <p><strong>Оберіть, що відгукується вам найбільше:</strong></p>
+
+  <div class="gift-choice">
+    <button>💗 Щаслива жінка</button>
+    <button>👩‍👧 Щаслива мама</button>
+    <button>🧘 Стоп стрес</button>
+    <button>🔙 Здорова спина</button>
+  </div>
+
+  <p><strong>Менеджер:</strong> Що скажете, Тетяно?  
+    Обираємо ваше щасливе майбутнє разом? 🚀</p>
+
+  <p>У нас є 2 зручні формати оплати:</p>
+  <ul>
+    <li>📌 За реквізитами</li>
+    <li>🏦 Частинами від банку</li>
+  </ul>
+  <p><em>Скажіть, який вам ближче — і я розповім детально ✅</em></p>
+</section>
+
+
+
+
+</main>
+
+<script>
+  function show(id){
+    document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  function toggleChip(el){
+    el.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
