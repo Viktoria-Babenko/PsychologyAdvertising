@@ -57,7 +57,7 @@
   background: #1e88e5;       /* можна підлаштувати під твої сині */
   color: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, 0.15s ease;
 }
 
 .btn-next:hover {
@@ -251,8 +251,7 @@
   <p class="q">Який формат вам зручніше розглянути зараз?</p>
   <div class="section-footer">
     <button class="btn-next" onclick="show('payment-installments')">Оплата частинами - це</button>
-  </div>
-  <div class="section-footer">
+    <button class="btn-next" onclick="show('cta-short')">Далі</button>
     <button class="btn-next" onclick="show('objection')">«Це дорого»</button>
     <button class="btn-next" onclick="show('objection2')">«Не на часі»</button>
   </div>
@@ -268,7 +267,9 @@
     <p>🔹 Вам потрібно лише підтвердити операцію в додатку.</p>
     <p>🔹 Після оплати, будь ласка, надішліть мені скрін оплати або фото чеку — і я одразу відкрию вам доступ до навчання.</p>
   </div>
-
+  <div class="section-footer">
+    <button class="btn-next" onclick="show('cta-short')">Далі</button>
+  </div>
 </section>
 
 
@@ -298,7 +299,7 @@
 
   <p><em>Тому розвиток своєї експертності — це шлях до стабільного доходу, свободи та допомоги людям 🤝💛</em></p>
   <div class="section-footer">
-    <button class="btn-next" onclick="show('cta-phrases')">Далі</button>
+    <button class="btn-next" onclick="show('cta-short')">Далі</button>
   </div>
 </section>
 
@@ -320,7 +321,7 @@
     ви зможете займатися улюбленою справою,заробляти гроші, допомагати людям і бачити свій ріст 💛
   </p>
   <div class="section-footer">
-    <button class="btn-next" onclick="show('cta-phrases')">Далі</button>
+    <button class="btn-next" onclick="show('cta-short')">Далі</button>
   </div>
 </section>
 <section id="cta-short" class="section">
