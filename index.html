@@ -86,7 +86,77 @@ button:active {
   transform: translateY(1px);
   box-shadow: 1px 1px 0px #1e1e1e;
 }
+.price-block {
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+    }
 
+    .price-columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .price-column {
+        flex: 1 1 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .tariff-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 16px 18px;
+        background: #ffffff;
+    }
+
+    .tariff-title {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+    }
+
+    .tariff-subtitle {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        opacity: 0.9;
+    }
+
+    .tariff-courses {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .price-full {
+        font-size: 14px;
+        font-weight: 600;
+        color: #d60000;
+        margin-bottom: 4px;
+    }
+
+    .price-sale {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 6px 10px;
+        border-radius: 8px;
+        background: #ffe76a;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .benefits {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        background: #f7f7f7;
+        padding: 8px 10px;
+        border-radius: 8px;
+        line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -98,15 +168,16 @@ button:active {
     <button onclick="show('needs')">🔎 Виявлення потреб</button>
     <button onclick="show('presentation')">Про нашу школу</button>
     <button onclick="show('compliment')">Комплімент</button>
-    <button onclick="show('pres3')">Програма «Базовий»</button>
-    <button onclick="show('pres4')"> Програма «Преміум» для себе </button>
-    <button onclick="show('pres1')">Програма «Преміум» для роботи</button>
-    <button onclick="show('pres2')"> Програма «Глобал ПРО МАХ»</button>
+    <button onclick="show('pres1')">Для себе</button>
+    <button onclick="show('pres2')">Для роботы з 0</button>
+    <button onclick="show('pres3')"> Для роботи з досвідом</button>
     <button onclick="show('format')"> Формат навчання </button>
+    <button onclick="show('price-block')"> Ціна </button>
     <button onclick="show('dokument')"> Документи </button>
     <button onclick="show('cta')">👉 Способи оплати</button>
     <button onclick="show('objection')"> ❗️«Це дорого»</button>
     <button onclick="show('objection2')"> ❗️«Не на часі»</button>
+    <button onclick="show('objection')"> ❗️«Подумаю»</button>
     <button onclick="show('cta-short')"> Заклик до дії </button>
     <button onclick="show('present')"> Подарунок </button>
   </div>
@@ -116,16 +187,16 @@ button:active {
 <section id="hello" class="section active">
   <h2>👋 Привітання</h2>
   <p> Добрий день, <em>[ім’я] </em>🙂</p>
-  <p>Мене звати <em>[ваше ім’я]</em>, школа Expert, напрям — [назва].<p></p>
+  <p>Мене звати <em>[ваше ім’я]</em>, школа Expert.</p>
+  <p>Ви залишали заявку щодо навчання за напрямом [Напрямок]. Зручно зараз кілька хвилин поговорити?</p>
   <p><em>Після відповіді клієнта:</em></p>
-  <p>Супер, дякую! Тоді зробимо так:</p>
+  <p><em>[ім’я] </em> дякую за інтерес до вивчення [Напрямок] . Пропоную зробити так:</p>
   <ul style="list-style: none; padding-left: 0;">
     <li>задам кілька уточнень,</li>
     <li>підберу програму саме під вашу ціль,</li>
-    <li>розкажу різницю між програмами та актуальні пропозиції,</li>
-    <li>і наприкінці обговоримо варіанти оплати</li>
+    <li>розкажу різницю між програмами, спеціальні ціни та подарунки які ми даруємо своїм студентам</li>
   </ul>
-  <p>Підійде такий формат?</p>
+  <p>Підійде такий формат, цікаво?</p>
   <p> Чудово, тоді почнемо 🤝</p>
   <div class="section-footer">
     <button class="btn-next" onclick="show('needs')">Далі</button>
@@ -133,11 +204,11 @@ button:active {
 </section>
 <section id="needs" class="section">
   <h2>🔎 Виявлення потреб</h2>
-  <p>✔️ Поставте клієнту 3 ключові запитання та уважно фіксуйте відповіді:</p>
+  <p>✔️ Поставте клієнту 2 ключові запитання 3(додатковий) та уважно фіксуйте відповіді:</p>
 
   <p><strong>1.</strong> Розкажіть, будь ласка, про свій досвід у сфері … (напрям)?</p>
   <p><strong>2.</strong> Розкажіть, будь ласка, як ви плануєте використовувати нові знання?</p>
-  <p><strong>3.</strong> Що для вас особливо важливо в навчанні?</p>
+  <p><strong>3.</strong> Що для вас особливо важливо в навчанні? (Додатковий для закритого клієнта)</p>
 
   <div class="note">
     🔸 Важливо фіксувати: цілі, болі, очікування, мотивацію — щоб зробити точну презентацію та коректно внести в CRM.
@@ -179,112 +250,79 @@ button:active {
   </div>
 </section>
 <section id="presentation" class="section">
-  <h2>Розповідаємо про школу</h2>
-  <div style="white-space: pre-line;">
-    Та щоб ви краще розуміли, розповім про нас. Ми — школа Expert.
+  <div>
+    Щоб ви краще розуміли, розповім про нас. Ми — школа Expert.
     Працюємо вже 11 років, нас обрали понад 70 000 студентів. 
-    Ми єдині в Україні, хто одразу дає трьохрівневу міжнародну сертифікацію.
-    Наш фокус — практика та результат. (навіть якщо ви починаєте з нуля)
+    Ми єдині в Україні, хто одразу дає трирівневу міжнародну сертифікацію з дипломом Mini MBA
+    <br>Наш фокус — практика та результат. (навіть якщо ви починаєте з нуля)
   </div>
   <p>
     Виходячи з вашого запиту та цілей, я рекомендую вам розглянути <strong>два варіанти програм</strong>, які будуть максимально корисні для вас:
   </p>
 
-  <div class="next">
+  <div>
     👉 <em>Далі менеджер презентує кожну програму окремо з урахуванням відповідей клієнта</em>
   </div>
 <div class="section-footer">
-    <button class="btn-next" onclick="show('pres3')">Для себе</button>
-    <button class="btn-next" onclick="show('pres1')">Для професії</button>
+    <button class="btn-next" onclick="show('pres1')">Для себе</button>
+    <button class="btn-next" onclick="show('pres2')">Для професії з 0</button>
+    <button class="btn-next" onclick="show('pres3')">Для професії з досвідом</button>
   </div>
 </section>
-<section id="pres1" class="section">
-  <h2>1️⃣ ПРЕМІУМ — базова програма для сильного старту</h2>
-  
-  <ul style="list-style: none; padding-left: 0;">
-    <li> навички розуміння поведінки людей</li>
-    <li> роботу з емоціями та саморегуляцію</li>
-    <li> базову діагностику психологічних станів</li>
-    <li> перші інструменти роботи з клієнтами та короткі консультації</li>
-  </ul>
-  <p>
-    <strong>⭐️ Перевага саме цієї програми:</strong> домашнє завдання та зворотний зв’язок від методиста
-  </p>
-  <div class="section-footer">
-    <button class="btn-next" onclick="show('pres2')">Далі</button>
-  </div>
-</section>
-<section id="pres2" class="section">
-  <h2>2️⃣ Global ProMax — поглиблена програма для впевненої практики</h2>
-  <p>Її обирають 80% наших студентів, тому що вона дає найшвидший розвиток і реальний професійний результат.</p>
-  <p><strong>Вона дає: </strong></p>
-  <ul style="list-style: none; padding-left: 0;">
-    <li>глибоке розуміння психології та поведінкових моделей</li>
-    <li>роботу з різними клієнтськими запитами</li>
-    <li>аналіз реальних кейсів</li>
-    <li>навички проведення повної консультації</li>
-    <li>інструменти для запуску власної практики</li>
-  </ul>
-  <p>
-    <strong>⭐️ Перевага саме цієї програми:</strong> групова супервізія з експертом — формат, де розбирають ваші кейси, виправляють помилки та швидко підсилюють професійний рівень.
-    <br>   8 групових та 8 індивідуальних Zoom-зустрічей, де ви розберете всі особисті питання й труднощі
-    <br>   допомога в упаковці особистого бренду (позиціонування, структура профілю, подача себе)
-    <br>   річна підписка на всі оновлення Expert, щоб завжди бути в актуальності</p>
-    <br>
 
-    <div class="section-footer">
-    <button class="btn-next" onclick="show('dokument')">Далі</button>
-  </div>
-</section>
-<section id="pres3" class="section">
-  <h2>1️⃣ БАЗОВИЙ КОМПЛЕКС — для себе, для розвитку, для розуміння себе</h2>
-  <p>Ви зрозумієте, як:</p>
-  <ul style="list-style: none; padding-left: 0;">
-    <li>краще розуміти себе та свої реакції </li>
-    <li>розбиратись в поведінці людей </li>
-    <li>отримати базові техніки для повсякденного життя </li>
-    <li>навчитися екологічній комунікації</li>
-    <li>покращити стосунки та емоційний стан</li>
-  </ul>
-  <p>
-    Ви одразу починаєте помічати зміни в собі, в реакціях, у взаємодії з людьми — без перевантаження і складних термінів.
-  </p>
-  <div class="section-footer">
-    <button class="btn-next" onclick="show('pres4')">Далі</button>
-  </div>
-</section>
-<section id="pres4" class="section">
-  <h2>2️⃣ ПРЕМІУМ КОМПЛЕКС — для себе + можливість допомагати іншим</h2>
-  <p>Цей формат обирають ті, хто хоче не просто розібратися у своїх станах, а й отримати глибші знання.</p>
-  <p>Він дає вам:</p>
-  <ul style="list-style: none; padding-left: 0;">
-    <li>глибше розуміння психологічних процесів </li>
-    <li>роботу з більш складними емоційними станами </li>
-    <li>аналіз поведінкових моделей </li>
-    <li>навички підтримки інших </li>
-    <li>розуміння, як проводити прості розмови</li>
-    <li>можливість працювати з запитами на рівні “допомога – порада – супровід”</li>
-  </ul>
-  <p>
-    <strong>⭐️ Перевага саме Преміум-комплексу </strong> це домашнє завдання зі зворотнім звʼязком,<br>
-    з отриманими знаннями ви зможете застосовувати їх не тільки для себе,<br>
-    а також — допомагати іншим, підтримувати друзів, родичів, клієнтів і навіть почати працювати в цьому напрямі.
-  </p>
-  <p>Це не просто особистий розвиток — це можливість зробити з цього нову навичку або професію.</p>
-  
-  <p><strong>Питання до клієнта:</strong><br>
-    👉 Підкажіть, будь ласка, який формат вам відгукується більше – Базовий чи Преміум комплекс, з перевіркою завдань та зворотним звʼязком від методиста ?
-  </p>
+<section id="pres1" class="section">
+  <p>Перша программа ⭐️ Базова психологія — це фундамент, який потрібен кожному</p>
+    <p>Як уміння читати й писати.</p>
+    <p>Це найцінніший вклад, який ти можеш зробити — в себе.</p><br>
+  <p>Друга програма , преміальне навчання ⭐️ Global Pro — це поглиблена програма, у якій ви працюєте з особистими менторами та кураторами.</p>
+  <p>Разом ви пропрацюєте внутрішні запити, що можуть заважати рухатися вперед.<br>
+    Ви отримуєте постійний супровід: куратор стежить за вашим прогресом, спрямовує та допомагає коригувати помилки.</p>
+    <p>Погодьтесь, підтримка — це те, що сильно прискорює результат, правда ж?</p>
+    <p>Це — улюблена програма наших студентів, і 70% обирають саме її.</p>
+    <p><em>[ім’я] </em>, що вам більше відгукується: базовий формат чи програма з повним супроводом?</p>
   <div class="section-footer">
     <button class="btn-next" onclick="show('format')">Далі</button>
   </div>
 </section>
+<section id="pres2" class="section">
+  <p>Перша програма <strong>Premium</strong></p>
+  <p>Це ваш старт у професію через практику та підтримку без відчуття самотності.</p>
+  <p>Ви вивчаєте не лише теорію — ви одразу тренуєте ключові навички: роботу з клієнтом, самодопомогу та перші кроки в консультуванні.</p>
+  <p>Друга програма <strong>Global Pro</strong> — це найшвидший шлях до професійного зростання.</p>
+  <p>Поруч із вами ментори та супервізія, яку обирають 80% наших студентів. Ви в реальному часі розбираєте кейси, отримуєте фідбек і стаєте впевненим практиком, готовим працювати з клієнтами.</p>
+  <p>Куратор завжди поруч — пояснить складне простими словами та допоможе рости без страху й сумнівів.</p>
+  <div class="section-footer">
+    <button class="btn-next" onclick="show('dokument')">Далі</button>
+  </div>
+</section>
+
+<section id="pres3" class="section">
+  <h2>Перша програма Premium — програма для тих, хто вже "в темі" психології</h2>
+<p>
+  Якщо у вас уже є базові знання або практика, <strong>Premium</strong> допоможе систематизувати досвід, закрити прогалини та впевнено рухатися далі. 
+  Ця програма підходить вам, якщо хочете структурувати те, що вже знаете про психіку та поведінкові моделі, глибше розуміти клієнтські запити, 
+  отримати чіткі алгоритми консультацій замість хаотичних підходів і посилити власну професійну впевненість.
+</p>
+
+<h2>Друга програма Global Pro Max — наступний рівень для досвідченого спеціаліста</h2>
+<p>
+  Це не просто навчання, а повноцінний стрибок у професійне зростання. 
+  Програма створена для спеціалістів, які хочуть глибше зануритися у практику: розбирати реальні кейси, отримувати корекцію помилок на супервізії, 
+  працювати з особистими запитами та професійними труднощами. Тут вам допоможуть упакувати особистий бренд та чітко позиціонувати себе як експерта, 
+  а річна підписка на оновлення Expert триматиме вас в актуальності. 
+  Це формат, у якому ви не просто навчаєтесь — ви <strong>відточуєте майстерність, підвищуєте свій рівень і масштабуєте практику</strong>. 
+  Саме її обирають 70% наших студентів.
+  <div class="section-footer">
+    <button class="btn-next" onclick="show('dokument')">Далі</button>
+  </div>
+</section>
+
 <section id="format" class="section">
   <p>І ще хочу коротко розповісти вам про наш формат навчання — це те, що вигідно відрізняє нас від інших шкіл.</p>
 
   <p>🔥Зручний формат навчання</p>
 
-  <p> Ми — єдині, хто створив повноцінний мобільний додаток, який можна безкоштовно скачати в App Store або Play Market, а також веб-версія<br>
+  <p> Ми — єдині, хто створив повноцінний мобільний додаток який можна безкоштовно скачати на телефон або планшет (в App Store або Play Market), а також веб-версія на компьютері<br>
   У ньому ви знайдете:</p>
 
   <p>– відеолекції<br>
@@ -292,10 +330,10 @@ button:active {
   – іспити у тестовому форматі</p>
 
   <p> Найкрутіше те, що всі відео можна дивитися в офлайн-режимі.<br>
-  Це дуже актуально зараз, коли інтернет або світло можуть зникати — і це те, чого немає на інших платформах.</p>
+  Це дуже актуально зараз, коли інтернет або світло можуть зникати — і це те, чого немає на інших платформах З доступом НАЗАВЖДИ </p>
 
   <div class="section-footer">
-    <button class="btn-next" onclick="show('cta')">Далі</button>
+    <button class="btn-next" onclick="show('price-block')">Далі</button>
   </div>
 </section>
 <section id="dokument" class="section">
@@ -308,8 +346,6 @@ button:active {
   <p>З маркируванням якості ISO, який відповідає європейським та міжнародним стандартам.</p>
 
   <p>2️⃣ Сертифікат підвищення кваліфікації від КНЕУ</p>
-
-  <p>Це документ державного зразка, який відкриває можливість працювати в державних установах та офіційних структурах.</p>
 
   <p>3️⃣ Диплом Mini MBA , HISTES, Czech University (произносится: <strong>Mini MBA, Хистэс, Чек Юнивёрсити</strong>) </p>
 
@@ -324,22 +360,121 @@ button:active {
     <button class="btn-next" onclick="show('format')">Далі</button>
   </div>
 </section>
-<section id="cta" class="section">
+<section id="price-block" class="section">
   <p>Давайте я швидко зорієнтую вас по вартості та варіантах оплати, щоб підібрати найзручніший саме для вас формат</p>
   <p><strong><em>Розповідаємо про ціни клієнту</em></strong></p>
-  <div class="cta">
-    <p class="lead"><strong>Зручні варіанти оплати:</strong></p>
-    <ul>
-      <li><strong>Оплата частинами</strong> (Monobank/PrivatBank/ПУМБ) — без переплат, комісії на себе бере школа, доступ відкриваємо одразу.</li>
-      <li><strong>Або повна оплата</strong> за реквізитами школи одним платежем.</li>
-    </ul>
+    <div class="price-columns">
+
+        <!-- ЛІВА КОЛОНКА -->
+        <div class="price-column">
+
+            <!-- PREMIUM -->
+            <div class="tariff-card">
+                <div class="tariff-title">PREMIUM</div>
+                <div class="tariff-subtitle">«Експерт з психології»</div>
+                <div class="tariff-courses">17 курсів</div>
+                <div class="price-full">Повна вартість: 24&nbsp;500 грн</span></div>
+                <div class="price-sale">Акційна ціна: <span>18&nbsp;400 грн</span></div>
+                <div class="benefits">
+                    Ви отримаєте сильну базу психолога-початківця і зможете впевнено працювати з емоціями та стосунками — це перший крок до власної практики.
+                </div>
+            </div>
+
+            <!-- GLOBAL PRO -->
+            <div class="tariff-card">
+                <div class="tariff-title">GLOBAL PRO</div>
+                <div class="tariff-subtitle">Комплексна програма</div>
+                <div class="tariff-courses">23 курси</div>
+                <div class="price-full">Повна вартість: <span>49&nbsp;800 грн</span></div>
+                <div class="price-sale">Акційна ціна: <span>46&nbsp;400 грн</span></div>
+                <div class="benefits">
+                    Програма дає глибоку професійну підготовку і реальну практику під супервізією, щоб ви впевнено стартували як фахівець у приватній практиці.
+                </div>
+            </div>
+
+            <!-- GLOBAL PRO MAX -->
+            <div class="tariff-card">
+                <div class="tariff-title">GLOBAL PRO MAX</div>
+                <div class="tariff-subtitle">Максимальний пакет</div>
+                <div class="tariff-courses">35 курсів</div>
+                <div class="price-full">Повна вартість: <span>73&nbsp;500 грн</span></div>
+                <div class="price-sale">Акційна ціна: <span>64&nbsp;000 грн</span></div>
+                <div class="benefits">
+                    Максимальна програма формує психолога експертного рівня, готового працювати з будь-якими запитами та вибудовувати сильну стабільну практику.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ПРАВА КОЛОНКА -->
+        <div class="price-column">
+
+            <!-- BASE -->
+            <div class="tariff-card">
+                <div class="tariff-title">BASE</div>
+                <div class="tariff-subtitle">«Я. Відносини. Сім'я»</div>
+                <div class="tariff-courses">4 курси</div>
+                <div class="price-full">Повна вартість: <span>12&nbsp;100 грн</span></div>
+                <div class="price-sale">Акційна ціна: <span>6&nbsp;200 грн</span></div>
+            </div>
+
+            <!-- PREMIUM (duplicate for right side if needed) -->
+            <div class="tariff-card">
+                <div class="tariff-title">PREMIUM</div>
+                <div class="tariff-subtitle">«Експерт з психології»</div>
+                <div class="tariff-courses">17 курсів</div>
+                <div class="price-full">Повна вартість: <span>24&nbsp;500 грн</span></div>
+                <div class="price-sale">Акційна ціна: <span>18&nbsp;400 грн</span></div>
+                <div class="benefits">
+                    Ви отримаєте сильну базу психолога-початківця і зможете впевнено працювати з емоціями та стосунками — це перший крок до власної практики.
+                </div>
+            </div>
+
+            <!-- GLOBAL PRO -->
+            <div class="tariff-card">
+                <div class="tariff-title">GLOBAL PRO</div>
+                <div class="tariff-subtitle">Комплексна програма</div>
+                <div class="tariff-courses">23 курси</div>
+                <div class="price-full">Повна вартість: <span>49&nbsp;800 грн</span></div>
+                <div class="price-sale">Акційна ціна: <span>46&nbsp;400 грн</span></div>
+                <div class="benefits">
+                    Програма дає глибоку професійну підготовку і реальну практику під супервізією, щоб ви впевнено стартували/працювали як фахівець у приватній практиці.
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="section-footer">
+    <button class="btn-next" onclick="show('cta')">Далі</button>
   </div>
-  <p class="q">Який формат вам зручніше розглянути зараз?</p>
+</section>
+
+<section id="cta" class="section">
+   <p style="margin: 0 0 12px 0;">
+        <strong>Ця спеціальна пропозиція діє для вас упродовж найближчих 24 годин, тому щоб зафіксувати всі умови, пропоную перейти до вибору зручного способу оплати.</strong>
+    </p>
+
+    <p style="margin: 0 0 10px 0;">У нас є два комфортні варіанти:</p>
+
+    <div style="margin-left: 10px;">
+        <p style="margin: 0 0 8px 0;">
+            <strong>1️⃣ Повна оплата за реквізитами школи</strong> — після оплати я одразу відкриваю доступ до навчання.
+        </p>
+
+        <p style="margin: 0 0 8px 0;">
+            <strong>2️⃣ Оплата частинами через ПриватБанк / monobank / ПУМБ</strong> — без комісії та переплат, усі комісії бере на себе школа, а доступ до навчання також відкривається одразу після підтвердження оплати в додатку.
+        </p>
+    </div>
+
+    <p style="margin-top: 16px; font-weight: 600;">
+        Який формат оплати буде зручніший для вас?
+    </p>
   <div class="section-footer">
     <button class="btn-next" onclick="show('payment-installments')">Оплата частинами - це</button>
     <button class="btn-next" onclick="show('cta-short')">Далі</button>
     <button class="btn-next" onclick="show('objection')">«Це дорого»</button>
     <button class="btn-next" onclick="show('objection2')">«Не на часі»</button>
+    <button class="btn-next" onclick="show('objection3')">«Подумаю»</button>
   </div>
 </section>
 <section id="payment-installments" class="section">
@@ -407,13 +542,27 @@ button:active {
     <button class="btn-next" onclick="show('cta-short')">Далі</button>
   </div>
 </section>
+<section id="objection2" class="section">
+  <h2>❗️Робота з запереченням: «Подумаю»</h2>
+
+  <p>
+  «Звісно, подумати — це нормально 😊<br>
+  Скажіть, будь ласка, по самій програмі як вам формат?<br><br>
+  Щоб вам було легше вирішити, скину коротке наповнення і документи.<br>
+  Куди зручніше — Telegram чи Viber?<br><br>
+  І щоб я втримала за вами умови, підкажіть:<br>
+  завтра вам зручніше, щоб я перетелефонувала — в першій чи другій половині дня?» 
+</p>
+</section>
 <section id="cta-short" class="section">
   <h2>Заклик до дії</h2>
 
   <div class="cta-phrases">
-    <p>Давайте зареєструємося зараз, щоб зафіксувати всі умови для вас.</p>
-    <p>Можу прямо зараз провести для вас реєстрацію — продовжуємо?</p>
-    <p>Тоді рухаємося до реєстрації, щоб усе було готово.</p>
+    <p>Скажіть, будь ласка, по самій програмі як вам формат?<br><br>
+  Щоб вам було легше вирішити, скину коротке наповнення і документи.<br>
+  Куди зручніше — Telegram чи Viber?<br><br>
+  І щоб я втримала за вами умови, підкажіть:<br>
+  завтра вам зручніше, щоб я перетелефонувала — в першій чи другій половині дня?» </p>
     <p>Щоб не відкладати, можу просто зараз допомогти вам із реєстрацією — підходить?</p>
     <p>Якщо згодні, давайте зараз пройдемо реєстрацію і закріпимо за вами доступ.</p>
   </div>
